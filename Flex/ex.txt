@@ -1,0 +1,3 @@
+hi
+my name is mike
+this is text with 3 lines
