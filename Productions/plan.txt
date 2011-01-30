@@ -1,0 +1,27 @@
+Plan:
+Classes:
+abstract target
+  class ProductionGroup	group of productions with the same name, and therefor may be targetted together
+    class Production	a production, whcih may target another production, grop of productions, or a terminal
+  class Terminal	a terminal
+
+target
+  empty abstract class. used for polymorphism
+
+ProductionGroup
+  list<production> productions
+  list<Terminal> first
+  list<Terminal> follow
+
+Production:
+  string Name		the name of this production. not unique
+  int id?		unique identifier for this terminal
+  target * targ		the target of this production
+
+Terminal
+  string symbol		the symbol this terminal produces
+			may be 0-length, representing epsilon.
+
+Iterations:
+1
+terminal & productions

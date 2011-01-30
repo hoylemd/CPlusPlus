@@ -2,51 +2,9 @@
    currently only holds strings, but will eventualy hold templates */
 
 #include "stack.h"
+#include "ListMember.h"
 #include <iostream>
 using namespace std;
-
-
-ListMember::ListMember (string s)
-{
-    next = NULL;
-    prev = NULL;
-    val = s;
-}
-ListMember::ListMember ()
-{
-    next = NULL;
-    prev = NULL;
-    val = "";
-}
-ListMember::~ListMember ()
-{
-    next = NULL;
-    prev = NULL;
-}
-void ListMember::Append (ListMember* l)
-{
-    next = l;
-}
-ListMember * ListMember::getNext ()
-{
-    return next;
-}
-void ListMember::Attach (ListMember* l)
-{
-    prev = l;
-}
-ListMember * ListMember::getPrev ()
-{
-    return prev;
-}
-void ListMember::setVal (string s)
-{
-    val = s; 
-}
-string ListMember::getVal ()
-{
-    return val;
-}
 
 Stack::Stack ()
 {
