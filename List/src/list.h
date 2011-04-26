@@ -20,7 +20,7 @@ public:
 	/* accessors */
 	ListItem * getHead ();
 	ListItem * getTail ();
-	ListItem * count ();
+	int count ();
 	ListItem * getAt (int);
 	
 	/* inserters */

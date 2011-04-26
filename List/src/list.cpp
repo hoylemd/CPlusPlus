@@ -81,3 +81,8 @@ void List::append (Listitem * li)
 	else
 		cerr << "List->append Error: null list item provided.\n"
 }
+void List::insertAt (ListItem * li, int index)
+{
+	/* validate argument */
+	
+}
