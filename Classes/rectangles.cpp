@@ -4,13 +4,13 @@ using namespace std;
 // Hey look! a class!
 class CRectangle
 {
-    // intrinsic private access, motherfuckers.
+    // intrinsic private access, friends.
         int x, y;
         double xd, yd;
     public:
         void set_values (int,int);
         void set_values (double, double);
-        // constructor! fuck yeah!
+        // constructor! woohoo!
         CRectangle ();
         CRectangle (int, int);
         CRectangle (double, double);
@@ -44,7 +44,7 @@ CRectangle::CRectangle (int a, int b)  // look! we can define methods outside th
     y = b;
     yd = b;
 }
-CRectangle::CRectangle (double a, double b) // overloading, bitches.
+CRectangle::CRectangle (double a, double b) // overloading, dude.
 {
     xd = a;
     x = xd;
@@ -61,7 +61,7 @@ CRectangle::CRectangle ()
 
 int main ()
 {
-    // test that shit.
+    // test this juicy stuff.
     CRectangle rect(3, 4), rectb(5.23, 6.4), rectc;
     cout << "rect area " << rect.area() << endl;
     cout << "rectb area " << rectb.area(true) << endl;
