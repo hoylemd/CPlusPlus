@@ -1,0 +1,4 @@
+MST:
+Length 268906 
+Edges:
+Time : 21.037000, procs: 4

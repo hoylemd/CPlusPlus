@@ -1,0 +1,27 @@
+   v>>vv>>>v>vv vvvvv    
+   >v>>>>>>>>vv >vvvv    
+   >>v >>>>>>vvv >>vv    
+v    >vv  vv>>vv >>vvvv v
+v     >>v >vvv>vv  >vvv v
+v    >>>>v >>v>vv>>>>vv v
+vv    >>>>>>v>v>v   vvvvv
+vv       >>>>>vvv vvvvvvv
+vv        >>>>>>>v>>>vv>v
+vvv vvv  >   >>>>>v>>>vvv
+vvvvv>vv   >  >>>>>v>>>v>
+vvvvvvvvv >v   >>>>v >>>>
+vvvvvvvvv >>v   >>vv >>>>
+>vvvv>>vv >>>>>>>>vv   >>
+>vvvv v>vv    >>>>vvv  >>
+>>vvv >>vv    >>>>>>v    
+>>vvv   >v     >>>>>>vv  
+>>>>v    vv        >>>v  
+>>>>v    vvv     vv >>>v 
+>>v>v    vvvv    >v  >>>v
+>>>>vv   >vvv  >v>v   >>>
+>>>>vv    >vvv  >>vv     
+  >>>v    vvvv    vv  >>v
+v>>>v>vv  >>vvv v >v   >>
+>>>>>v>vv>vvvvv vv>vv    
+Arguments:  p8 b25 t5 c90 m200 s4450
+Iterations: 38, Ending Density: 92, Time = 0.010

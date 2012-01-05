@@ -1,0 +1,37 @@
+﻿Build started 10/11/2010 11:12:18 AM.
+     1>Project "H:\Documents\Visual Studio 2010\Projects\rbs-openmp\rbs\rbs.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\rbs-openmp.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IS:\cs4450\pthreads\win32\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt rbs.c
+         rbs.c
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\wallclock.h(16): warning C4244: 'initializing' : conversion from 'double' to 'clock_t', possible loss of data
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(523): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(550): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(562): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(684): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(685): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(686): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(692): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>h:\documents\visual studio 2010\projects\rbs-openmp\rbs\rbs.c(495): warning C4101: 'rotation' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Documents\Visual Studio 2010\Projects\rbs-openmp\Debug\rbs-openmp.exe" /NOLOGO /LIBPATH:S:\cs4450\pthreads\win32\lib pthreadVC2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\rbs-openmp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Documents\Visual Studio 2010\Projects\rbs-openmp\Debug\rbs-openmp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Documents\Visual Studio 2010\Projects\rbs-openmp\Debug\rbs-openmp.lib" /MACHINE:X86 Debug\rbs.obj
+         LINK : H:\Documents\Visual Studio 2010\Projects\rbs-openmp\Debug\rbs-openmp.exe not found or not built by the last incremental link; performing full link
+         rbs.vcxproj -> H:\Documents\Visual Studio 2010\Projects\rbs-openmp\Debug\rbs-openmp.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"H:\Documents\Visual Studio 2010\Projects\rbs-openmp\Debug\rbs-openmp.exe;#1" /manifest "Debug\rbs-openmp.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Debug\rbs-openmp.unsuccessfulbuild".
+         Touching "Debug\rbs-openmp.lastbuildstate".
+     1>Done Building Project "H:\Documents\Visual Studio 2010\Projects\rbs-openmp\rbs\rbs.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.84
