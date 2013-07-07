@@ -39,6 +39,34 @@ void HashEntry::append(HashEntry * entry) {
 	}
 }
 
+// remover
+HashEntry * HashEntry::remove(string iKey) {
+	HashEntry * temp_next = NULL;
+	if (iKey == key) {
+		temp_next = next;
+		next = NULL;
+		return temp_next;
+	} else {
+		if (next) {
+			temp_next = next->remove(iKey);
+			if (temp_next != next) {
+				delete(next);
+				next = temp_next;
+			}
+		}
+		return this;
+	}
+}
+// stringer
+string HashEntry::toString() {
+	stringstream ss;
+	string out = "";
+
+	ss << "'" << key << "' - {" << value << "}";
+
+	return ss.str();
+}
+
 /*** Hashmap class stuff ***/
 // constructor
 Hashmap::Hashmap(int iSize) {
@@ -96,11 +124,25 @@ void Hashmap::remove(string key) {
 
 	if (entries[index]) {
 		result = entries[index]->remove(key);
-		if (result) {
-			entries[index] = result;
-		} else {
+		if (result != entries[index]) {
 			delete (entries[index]);
-			entries[index] = NULL;
+			entries[index] = result;
 		}
 	}
+}
+
+// stringer
+string Hashmap::toString() {
+	int i = 0;
+	stringstream ss;
+	HashEntry * entry;
+	for (i = 0; i < size; i += 1) {
+		if (entries[i]) {
+			for (entry = entries[i]; entry; entry = entry->next) {
+				ss << "[" << i << "] - " << entry->toString() << "\n";
+			}
+		}
+	}
+
+	return ss.str();
 }

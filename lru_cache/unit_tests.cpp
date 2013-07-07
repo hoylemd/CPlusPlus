@@ -119,6 +119,24 @@ int test_hashmap(int argc, char ** argv) {
 		cout << "NULL retrieved from 'nothing'. correct.\n";
 	}
 
+	cout << map->toString();
+
+	// test the remove function
+	map->remove("salt_pork");
+	if (map->get("salt_pork")) {
+		cerr << "something returned from removed element 'salt_pork'. INCORRECT\n";
+	} else {
+		cout << "'salt_pork' removed successfully. correct.\n";
+	}
+	map->remove("carrot");
+	if (map->get("carrot")) {
+		cerr << "something returned from removed element 'carrot'. INCORRECT\n";
+	} else {
+		cout << "'carrot' removed successfully. correct.\n";
+	}
+
+	cout << map->toString();
+
 	// clean up
 	delete salt_pork;
 	delete bacon;

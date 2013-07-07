@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <sstream>
 #include "djb2.h"
 
 #define byte unsigned char
@@ -9,13 +10,14 @@ class HashEntry {
 	private :
 		string key;
 		void * value;
-		HashEntry * next;
 	public :
-		HashEntry(string key, void * value);
+		HashEntry(string iKey, void * iValue);
 		~HashEntry();
-		void * get (string key);
-		HashEntry * remove(string key);
+		HashEntry * next;
+		void * get (string iKey);
+		HashEntry * remove(string iKey);
 		void append(HashEntry * entry);
+		string toString();
 };
 
 class Hashmap {
@@ -24,10 +26,11 @@ class Hashmap {
 		HashEntry ** entries;
 		int hash(string key);
 	public :
-		Hashmap(int size);
+		Hashmap(int iSize);
 		~Hashmap();
 		int getSize();
 		void set(string key, void * value);
 		void remove(string key);
 		void * get(string key);
+		string toString();
 };
