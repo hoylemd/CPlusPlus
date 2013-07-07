@@ -70,10 +70,22 @@ int Hashmap::hash(string key) {
 // setter
 void Hashmap::set(string key, void * value) {
 	int index = hash(key);
-
+	HashEntry * entry = new HashEntry(key, value);
+	if (entries[index]) {
+		entries[index]->append(entry);
+	} else {
+		entries[index] = entry;
+	}
 }
 
 // getter
 void * Hashmap::get(string key) {
-	return NULL;
+	int index = hash(key);
+	HashEntry * entry = NULL;
+
+	if (entries[index]) {
+		return entries[index]->get(key);
+	} else {
+		return NULL;
+	}
 }
