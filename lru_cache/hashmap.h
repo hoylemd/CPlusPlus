@@ -14,6 +14,7 @@ class HashEntry {
 		HashEntry(string key, void * value);
 		~HashEntry();
 		void * get (string key);
+		HashEntry * remove(string key);
 		void append(HashEntry * entry);
 };
 
@@ -27,5 +28,6 @@ class Hashmap {
 		~Hashmap();
 		int getSize();
 		void set(string key, void * value);
+		void remove(string key);
 		void * get(string key);
 };

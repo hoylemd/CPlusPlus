@@ -81,11 +81,26 @@ void Hashmap::set(string key, void * value) {
 // getter
 void * Hashmap::get(string key) {
 	int index = hash(key);
-	HashEntry * entry = NULL;
 
 	if (entries[index]) {
 		return entries[index]->get(key);
 	} else {
 		return NULL;
+	}
+}
+
+// remover
+void Hashmap::remove(string key) {
+	int index = hash(key);
+	HashEntry * result = NULL;
+
+	if (entries[index]) {
+		result = entries[index]->remove(key);
+		if (result) {
+			entries[index] = result;
+		} else {
+			delete (entries[index]);
+			entries[index] = NULL;
+		}
 	}
 }
