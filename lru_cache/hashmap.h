@@ -5,14 +5,27 @@
 
 using namespace std;
 
+class HashEntry {
+	private :
+		string key;
+		void * value;
+		HashEntry * next;
+	public :
+		HashEntry(string key, void * value);
+		~HashEntry();
+		void * get (string key);
+		void append(HashEntry * entry);
+};
+
 class Hashmap {
 	private:
 		int size;
-		void ** entries;
+		HashEntry ** entries;
 		int hash(string key);
 	public :
 		Hashmap(int size);
 		~Hashmap();
+		int getSize();
 		void set(string key, void * value);
 		void * get(string key);
 };

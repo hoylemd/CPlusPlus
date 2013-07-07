@@ -48,7 +48,11 @@ int test_hashmap(int argc, char ** argv) {
 
 	// test instantiation
 	map = new Hashmap(15);
-	cout << "made hashmap object successfully\n";
+	if (map->getSize() == 15) {
+		cout << "made hashmap object successfully. correct\n";
+	} else {
+		cerr << "hashmap created with wrong size (" << map->getSize() << "). INCORRECT\n";
+	}
 
 	// set some things
 	map->set("potato", &potato);
