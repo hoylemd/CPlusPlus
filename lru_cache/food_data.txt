@@ -1,17 +1,17 @@
-potato 0.5 carb 0.5
-carrot 0.25 veg 0.2
-apple 0.30 fruit 0.25
-steak 10 meat 0.8
-chicken 3 meat 0.5
-sweet_pepper 0.2 veg 0.1
-naan 2.5 carb 1
-pepperettes 5.99 meat 5
-peas 3 veg 1
-chocolate_bar 1.75 carb 0.75
-pork_chop 2.25 meat 0.5
-coke 1.50 carb 0.75
-ketchup_chips 2.5 carb 2
-tomato_soup 0.99 veg 1
+potato carby food, yummy when fried
+carrot nutritious vegetable. orange and cruncy
+apple delicious fruit. Sweet, yet tangy
+steak The ultimate meat. Full of protein and delicious fats.
+chicken Yummy poultry. great alone, or with anything
+sweet_pepper Not so great vegetable, but when prepared right, can be awesome
+naan An idian bread product. flatbread, and very good with some butter
+pepperettes A snack food with a medium amount of protein and too much salt
+peas yummy vegetable. green and round.
+chocolate_bar Not very good for you buy BOY is it tasty!
+pork_chop not the best meat overall, but has some great potential
+coke This stuff will kill you, but at least you'll die smiling
+ketchup_chips The best snack food that doesnt exist outside of canada
+tomato_soup a great way to while away a rainy afternoon
 
 
 
