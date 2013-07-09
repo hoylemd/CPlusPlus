@@ -64,7 +64,8 @@ string HashEntry::toString() {
 
 	ss << "'" << key << "' - {" << value << "}";
 
-	return ss.str();
+	out = ss.str();
+	return out;
 }
 
 /*** Hashmap class stuff ***/
@@ -145,4 +146,5 @@ string Hashmap::toString() {
 	}
 
 	return ss.str();
+	return out;
 }

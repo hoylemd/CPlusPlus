@@ -7,36 +7,41 @@
 
 using namespace std;
 
-int test_hash (int argc, char ** argv) {
+bool test_hash (int argc, char ** argv) {
 	int hash_size = 15;
+	bool passed = true;
 
 	if (HASH("hot_dog", hash_size) == 13) {
 		cout << "hash('hot_dog') => 13. correct\n";
 	} else {
 		cerr << "hash('hot_dog') => " << HASH("hot_dog", hash_size) << ". INCORRECT\n";
+		passed = false;
 	}
 	if (HASH("salt_pork", hash_size) == 14) {
 		cout << "hash('salt_pork') => 14. correct\n";
 	} else {
 		cerr << "hash('salt_pork') => " << HASH("salt_pork", hash_size) << ". INCORRECT\n";
+		passed = false;
 	}
 	if (HASH("bacon", hash_size) == 14) {
 		cout << "hash('bacon') => 14. correct\n";
 	} else {
 		cerr << "hash('bacon') => " << HASH("bacon", hash_size) << ". INCORRECT\n";
+		passed = false;
 	}	if (HASH("pizza", hash_size) == 1) {
 		cout << "hash('pizza') => 1. correct\n";
 	} else {
 		cerr << "hash('pizza') => " << HASH("pizza", hash_size) << ". INCORRECT\n";
+		passed = false;
 	}
 
-	return 0;
+	return passed;
 
 }
 
-int test_hashmap(int argc, char ** argv) {
+bool test_hashmap(int argc, char ** argv) {
 	Hashmap * map;
-
+	bool passed = true;
 
 	// initialize test data
 	int potato = 5;
@@ -52,6 +57,7 @@ int test_hashmap(int argc, char ** argv) {
 		cout << "made hashmap object successfully. correct\n";
 	} else {
 		cerr << "hashmap created with wrong size (" << map->getSize() << "). INCORRECT\n";
+		passed = false;
 	}
 
 	// set some things
@@ -72,9 +78,11 @@ int test_hashmap(int argc, char ** argv) {
 			cout << "'potato' retrieved, value is 5. correct.\n";
 		} else {
 			cerr << "'potato' retrieved, but value was not 5 (" << potato << "). INCORRECT\n";
+			passed = false;
 		}
 	} else {
 		cerr << "nothing retrieved from 'potato'. INCORRECT\n";
+		passed = false;
 	}
 	reciever = map->get("salt_pork");
 	if (reciever) {
@@ -83,6 +91,7 @@ int test_hashmap(int argc, char ** argv) {
 			cout << "'salt_pork' retrieved, value is 'popeye'. correct.\n";
 		} else {
 			cerr << "'salt_pork' retrieved, but value was not popeye (" << *temp << "). INCORRECT\n";
+			passed = false;
 		}
 	} else {
 		cerr << "nothing retrieved from 'salt_pork'. INCORRECT\n";
@@ -94,9 +103,11 @@ int test_hashmap(int argc, char ** argv) {
 			cout << "'bacon' retrieved, value is 'porky'. correct.\n";
 		} else {
 			cerr << "'bacon' retrieved, but value was not porky (" << *temp << "). INCORRECT\n";
+			passed = false;
 		}
 	} else {
 		cerr << "nothing retrieved from 'bacon'. INCORRECT\n";
+		passed = false;
 	}
 	reciever = map->get("carrot");
 	if (reciever) {
@@ -105,9 +116,11 @@ int test_hashmap(int argc, char ** argv) {
 			cout << "'carrot' retrieved, value is 5. correct.\n";
 		} else {
 			cerr << "'carrot' retrieved, but value was not 5 (" << *carrot << "). INCORRECT\n";
+			passed = false;
 		}
 	} else {
 		cerr << "nothing retrieved from 'carrot'. INCORRECT\n";
+		passed = false;
 	}
 
 	// attempt to get an unset key
@@ -115,6 +128,7 @@ int test_hashmap(int argc, char ** argv) {
 	if (reciever) {
 		temp = (string *) reciever;
 		cerr << "something retrieved from 'nothing' (" << *temp << ". INCORRECT\n";
+		passed = false;
 	} else {
 		cout << "NULL retrieved from 'nothing'. correct.\n";
 	}
@@ -125,12 +139,14 @@ int test_hashmap(int argc, char ** argv) {
 	map->remove("salt_pork");
 	if (map->get("salt_pork")) {
 		cerr << "something returned from removed element 'salt_pork'. INCORRECT\n";
+		passed = false;
 	} else {
 		cout << "'salt_pork' removed successfully. correct.\n";
 	}
 	map->remove("carrot");
 	if (map->get("carrot")) {
 		cerr << "something returned from removed element 'carrot'. INCORRECT\n";
+		passed = false;
 	} else {
 		cout << "'carrot' removed successfully. correct.\n";
 	}
@@ -141,10 +157,21 @@ int test_hashmap(int argc, char ** argv) {
 	delete salt_pork;
 	delete bacon;
 	delete map;
+
+	return passed;
+}
+
+bool test_cache(int argc, char ** argv) {
+	return true;
 }
 
 int main (int argc, char ** argv) {
-	test_hash(argc, argv);
-	test_hashmap(argc, argv);
+	bool passed = test_hash(argc, argv);
+	if (passed) {
+		bool passed = test_hashmap(argc, argv);
+	}
+	if (passed) {
+		bool passed = test_cache(argc, argv);
+	}
 }
 

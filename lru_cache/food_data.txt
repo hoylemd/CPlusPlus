@@ -1,0 +1,17 @@
+potato 0.5 carb 0.5
+carrot 0.25 veg 0.2
+apple 0.30 fruit 0.25
+steak 10 meat 0.8
+chicken 3 meat 0.5
+sweet_pepper 0.2 veg 0.1
+naan 2.5 carb 1
+pepperettes 5.99 meat 5
+peas 3 veg 1
+chocolate_bar 1.75 carb 0.75
+pork_chop 2.25 meat 0.5
+coke 1.50 carb 0.75
+ketchup_chips 2.5 carb 2
+tomato_soup 0.99 veg 1
+
+
+
