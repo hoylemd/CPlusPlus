@@ -13,5 +13,5 @@ class Cache {
 	public:
 		Cache(string data_file, int cache_size);
 		~Cache();
-		get(string key);
-}
+		string get(string key);
+};

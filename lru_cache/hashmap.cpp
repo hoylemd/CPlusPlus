@@ -146,5 +146,4 @@ string Hashmap::toString() {
 	}
 
 	return ss.str();
-	return out;
 }
