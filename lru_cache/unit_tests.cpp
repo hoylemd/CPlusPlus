@@ -2,6 +2,7 @@
 #include <sstream>
 #include "debug.h"
 #include "hashmap.h"
+#include "cache.h"
 
 #define HASH djb2
 
@@ -162,7 +163,12 @@ bool test_hashmap(int argc, char ** argv) {
 }
 
 bool test_cache(int argc, char ** argv) {
-	return true;
+	string * data_file = new string("food_data.txt");
+	Cache * cache = new Cache(*data_file, 256);
+
+	cout << "cache created successfully";
+
+	delete data_file;
 }
 
 int main (int argc, char ** argv) {

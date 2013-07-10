@@ -3,6 +3,7 @@
 #include "djb2.h"
 
 #define byte unsigned char
+#define HASHMAP_H TRUE
 
 using namespace std;
 
