@@ -180,6 +180,8 @@ bool test_cache(int argc, char ** argv) {
 
 	cout << cache_case("potato", cache);
 	cout << cache_case("potato", cache);
+	cache->pubDrop("potato");
+	cout << cache_case("potato", cache);
 
 	delete data_file;
 	delete cache;
