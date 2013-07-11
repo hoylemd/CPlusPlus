@@ -1,5 +1,6 @@
 #include <string>
 #include <cstdio>
+#include <iostream>
 #ifndef HASHMAP_H
 #include "hashmap.h"
 #endif
