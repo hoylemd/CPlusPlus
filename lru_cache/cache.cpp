@@ -15,8 +15,10 @@ string * Cache::get(string key) {
 
 	// cache hit
 	if (result = (string *)records->get(key)) {
+		cout << "cache hit (" << key << ")\n";
 		return result;
 	} else {
+		cout << "cache miss (" << key << ")\n";
 		return missGet(key);
 	}
 }
@@ -24,9 +26,10 @@ string * Cache::get(string key) {
 string * Cache::missGet(string key) {
 	FILE * file = fopen(source.c_str(), "r");
 	char line[INPUT_BUFFER];
-	string * line_string = NULL, read_key = NULL, * value = NULL;
+	string * line_string = NULL, read_key, * value = NULL;
 	int space_index = 0;
 	bool found_key = false;
+
 	// get the data from the source file
 	while (fgets(line, INPUT_BUFFER, file) != NULL && !found_key) {
 		line_string = new string(line);
