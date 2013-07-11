@@ -34,4 +34,5 @@ class Hashmap {
 		void remove(string key);
 		void * get(string key);
 		string toString();
+		void * pop(string key);
 };
