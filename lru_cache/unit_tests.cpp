@@ -162,13 +162,27 @@ bool test_hashmap(int argc, char ** argv) {
 	return passed;
 }
 
+string cache_case (const char * key, Cache * cache) {
+	string * retrieved = (string*)cache->get(key);
+	stringstream ss;
+	if (retrieved) {
+		ss << "retrieved '" << key << "': " << *(string*)retrieved << "\n";
+	}
+
+	return ss.str();
+}
+
 bool test_cache(int argc, char ** argv) {
-	string * data_file = new string("food_data.txt");
+	string * data_file = new string("food_data.txt"), * retrieved = NULL;;
 	Cache * cache = new Cache(*data_file, 256);
 
-	cout << "cache created successfully";
+	cout << "cache created successfully\n";
+
+	cout << cache_case("potato", cache);
+	cout << cache_case("potato", cache);
 
 	delete data_file;
+	delete cache;
 }
 
 int main (int argc, char ** argv) {
