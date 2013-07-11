@@ -1,5 +1,5 @@
 CC = gcc
-CPC = g++
+CPC = g++ -g
 
 DEBUG_HEADER = debug.h
 DEBUG_CODE = debug.cpp
@@ -50,6 +50,9 @@ $(UNIT_TESTS_OUT) : $(UNIT_TESTS_CODE) $(UNIT_TEST_REQS)
 
 test : $(UNIT_TESTS_OUT)
 	./$(UNIT_TESTS_OUT)
+
+memcheck : $(UNIT_TESTS_OUT)
+	valgrind ./$(UNIT_TESTS_OUT)
 
 clean :
 	rm -f $(HASH_OUT) $(DEBUG_OUT) $(HASHMAP_OUT) $(UNIT_TESTS_OUT) $(HASH_TEST_EXE) *.o
