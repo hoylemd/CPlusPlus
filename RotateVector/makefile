@@ -1,0 +1,34 @@
+CC = gcc
+CPC = g++ -g
+
+DEBUG_HEADER = debug.h
+DEBUG_CODE = debug.cpp
+DEBUG_OUT = debug
+
+ROTATE_HEADER = rotate.h
+ROTATE_CODE = rotate.cpp
+ROTATE_OUT = rotate.o
+
+UNIT_TESTS_CODE = unit_tests.cpp
+UNIT_TESTS_OUT = unit_tests
+UNIT_TEST_REQS =$(DEBUG_OUT) $(ROTATE_OUT)
+
+all : $(UNIT_TESTS_OUT)
+
+$(DEBUG_OUT) : $(DEBUG_HEADER) $(DEBUG_CODE)
+	$(CPC) -c $(DEBUG_CODE) -o $(DEBUG_OUT)
+
+$(ROTATE_OUT) : $(ROTATE_CODE) $(ROTATE_HEADER)
+	$(CPC) -c $(ROTATE_CODE) -o $(ROTATE_OUT)
+
+$(UNIT_TESTS_OUT) : $(UNIT_TESTS_CODE) $(UNIT_TEST_REQS)
+	$(CPC) $(UNIT_TESTS_CODE)  $(UNIT_TEST_REQS) -o $(UNIT_TESTS_OUT)
+
+test : $(UNIT_TESTS_OUT)
+	./$(UNIT_TESTS_OUT)
+
+memcheck : $(UNIT_TESTS_OUT)
+	valgrind ./$(UNIT_TESTS_OUT)
+
+clean :
+	rm -f $(HASH_OUT) $(DEBUG_OUT) $(HASHMAP_OUT) $(UNIT_TESTS_OUT) $(HASH_TEST_EXE) *.o
