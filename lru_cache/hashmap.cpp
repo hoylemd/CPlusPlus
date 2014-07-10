@@ -152,3 +152,13 @@ string Hashmap::toString() {
 
 	return ss.str();
 }
+
+// popper
+void * Hashmap::pop(string key) {
+	void * value = NULL;
+	if (value = get(key)) {
+		remove(key);
+	}
+
+	return value;
+};

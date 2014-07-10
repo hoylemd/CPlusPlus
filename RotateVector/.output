@@ -1,0 +1,54 @@
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   cache.cpp
+#	new file:   cache.h
+#	new file:   cache.o
+#	new file:   debug
+#	new file:   debug.cpp
+#	new file:   debug.h
+#	new file:   djb2.cpp
+#	new file:   djb2.h
+#	new file:   djb2.o
+#	new file:   food_data.txt
+#	new file:   hashmap.cpp
+#	new file:   hashmap.h
+#	new file:   hashmap.o
+#	new file:   makefile
+#	new file:   readme
+#	new file:   rotate.cpp
+#	new file:   rotate.h
+#	new file:   rotate.o
+#	new file:   test_hash.cpp
+#	new file:   todo.txt
+#	new file:   unit_tests
+#	new file:   unit_tests.cpp
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    cache.cpp
+#	deleted:    cache.h
+#	deleted:    cache.o
+#	deleted:    djb2.cpp
+#	deleted:    djb2.h
+#	deleted:    djb2.o
+#	deleted:    food_data.txt
+#	deleted:    hashmap.cpp
+#	deleted:    hashmap.h
+#	deleted:    hashmap.o
+#	deleted:    test_hash.cpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.output
+#	../lru_cache/.commit
+#	../lru_cache/.output
+#	../lru_cache/cache.o
+#	../lru_cache/debug
+#	../lru_cache/djb2.o
+#	../lru_cache/hashmap.o
+#	../lru_cache/unit_tests
