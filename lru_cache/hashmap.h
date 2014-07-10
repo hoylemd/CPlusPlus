@@ -29,6 +29,7 @@ class Hashmap {
 	public :
 		Hashmap(int iSize);
 		~Hashmap();
+		bool destruct();
 		int getSize();
 		void set(string key, void * value);
 		void remove(string key);

@@ -86,6 +86,11 @@ Hashmap::~Hashmap() {
 	}
 }
 
+// total destructor. clears out the entries as well
+bool Hashmap::destruct() {
+
+}
+
 // size function
 int Hashmap::getSize() {
 	return size;
